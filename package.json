@@ -1,0 +1,35 @@
+{
+  "name": "NodeAPI",
+  "version": "1.0.0",
+  "description": "Node_js API",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./bin/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevDanielRabelo/NodeAPI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DevDanielRabelo/NodeAPI/issues"
+  },
+  "homepage": "https://github.com/DevDanielRabelo/NodeAPI#readme",
+  "dependencies": {
+    "azure-storage": "^2.1.0",
+    "body-parse": "^0.1.0",
+    "debug": "^4.1.1",
+    "express": "^4.17.1",
+    "guid": "0.0.12",
+    "http": "0.0.0",
+    "jsonwebtoken": "^7.4.0",
+    "md5": "^2.2.1",
+    "mongoose": "^5.7.7",
+    "sendgrid": "^2.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  }
+}
