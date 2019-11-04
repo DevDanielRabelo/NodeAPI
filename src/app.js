@@ -2,24 +2,24 @@
 
 const express = require('express');
 const bodyParser = require('body-parser');
-const mongoose = require('mongoose');
-const config = require('./config');
+// const mongoose = require('mongoose');
+// const config = require('./config');
 
 const app = express();
 
 //Conect ao banco
-mongoose.connect(config.connectionString);
+// mongoose.connect(config.connectionString);
 
 //Carregar os Models
-const Product = require('./models/product');
-const Customer = require('./models/customer');
-const Order = require('./models/order');
+// const Product = require('./models/product');
+// const Customer = require('./models/customer');
+// const Order = require('./models/order');
 
 //Carregar as Rotas
 const indexRoute = require('./routes/index-route');
-const productRoute = require('./routes/product-route');
-const customerRoute = require('./routes/customer-route');
-const orderRoute = require('./routes/order-route');
+// const productRoute = require('./routes/product-route');
+// const customerRoute = require('./routes/customer-route');
+// const orderRoute = require('./routes/order-route');
 
 app.use(bodyParser.json({
     limit: '5mb'
@@ -36,9 +36,9 @@ app.use(function (req, res, next){
 
 
 app.use('/', indexRoute);
-app.use('/products', productRoute);
-app.use('/customers', customerRoute);
-app.use('/orders', orderRoute);
+// app.use('/products', productRoute);
+// app.use('/customers', customerRoute);
+// app.use('/orders', orderRoute);
 
 module.exports = app;
 

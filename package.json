@@ -17,7 +17,9 @@
     "url": "https://github.com/DevDanielRabelo/NodeAPI/issues"
   },
   "homepage": "https://github.com/DevDanielRabelo/NodeAPI#readme",
-  "engines": {"node":"10.14.1"},
+  "engines": {
+    "node": "10.14.1"
+  },
   "dependencies": {
     "azure-storage": "^2.1.0",
     "body-parse": "^0.1.0",
