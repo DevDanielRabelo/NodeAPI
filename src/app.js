@@ -8,8 +8,7 @@ const config = require('./config');
 const app = express();
 
 //Conect ao banco
-mongoose.set('useCreateIndex', true)
-mongoose.connect(config.connectionString, { useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(config.connectionString);
 
 //Carregar os Models
 const Product = require('./models/product');
