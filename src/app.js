@@ -34,6 +34,35 @@ app.use(function (req, res, next){
     next();
 });
 
+const nodemailer = require('nodemailer');
+
+var transporter = nodemailer.createTransport({
+  host: "smtp.gmail.com",
+  port: 465,
+  secure: true, // upgrade later with STARTTLS
+  auth: {
+    user: "danielrabelo2001@gmail.com",
+    pass: "88693663daniel"
+  }
+});
+
+var mailOptions = {
+  from: 'danielrabelo2001@gmail.com',
+  to: 'daniel@mauicomunicacao.com.br',
+  subject: 'Sending Email using Node.js',
+  text: 'That was easy!'
+};
+
+transporter.sendMail(mailOptions, function(error, info){
+  if (error) {
+    console.log(error);
+  } else {
+    console.log('Email sent: ' + info.response);
+  }
+});
+
+
+
 
 app.use('/', indexRoute);
 app.use('/products', productRoute);
